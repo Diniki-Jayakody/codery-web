@@ -8,10 +8,10 @@ import './index.css';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
-// const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
-// const HireTalent = lazy(() => import('./pages/HireTalent'));
-// const Portfolio = lazy(() => import('./pages/Portfolio'));
-// const Contact = lazy(() => import('./pages/Contact'));
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
+const HireTalent = lazy(() => import('./pages/HireTalent'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 const SkeletonPage = () => (
   <main className="pt-24 sm:pt-28 lg:pt-32">
@@ -46,10 +46,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              {/* <Route path="/services/:slug" element={<ServiceDetail />} /> */}
-              {/* <Route path="/hire-talent" element={<HireTalent />} />
+              <Route path="/services/:slug" element={<ServiceDetail />} />
+              <Route path="/hire-talent" element={<HireTalent />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contact" element={<Contact />} /> */}
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </Suspense>
         </div>
