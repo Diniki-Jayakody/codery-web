@@ -1,3 +1,9 @@
+import outlineWebImg from '../assets/projects/project_outline_construction.png';
+import veloFleetWebImg from '../assets/projects/velo_fleet_web.jpg';
+import veloFleetMobileImg from '../assets/projects/velo_fleet_mobile.png';
+import thompsonWebsite from '../assets/projects/thompson_website.png';
+
+
 export const portfolio = [
     {
       id: 'thompsons-group-website',
@@ -7,7 +13,7 @@ export const portfolio = [
       tech: ['HTML', 'CSS', 'CMS'],
       category: 'Web',
       imageUrl:
-        'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      thompsonWebsite,
     },
     {
       id: 'outline-construction-website',
@@ -17,7 +23,7 @@ export const portfolio = [
       tech: ['React', 'Tailwind'],
       category: 'Web',
       imageUrl:
-        'https://images.pexels.com/photos/37347/office-freelancer-computer-business-37347.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        outlineWebImg,
     },
     {
       id: 'velo-fleet-platform',
@@ -27,7 +33,7 @@ export const portfolio = [
       tech: ['Java', 'Angular', 'Apache Superset'],
       category: 'Enterprise',
       imageUrl:
-        'https://images.pexels.com/photos/980002/pexels-photo-980002.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        veloFleetWebImg,
     },
     {
       id: 'fleet-management-mobile-app',
@@ -37,7 +43,7 @@ export const portfolio = [
       tech: ['React Native', 'REST API'],
       category: 'Mobile',
       imageUrl:
-        'https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        veloFleetMobileImg
     },
   ];
   

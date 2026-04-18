@@ -3,6 +3,8 @@ import SectionHeading from '../components/ui/SectionHeading';
 import PortfolioTile from '../components/ui/PortfolioTile';
 import CTABanner from '../components/ui/CTABanner';
 import portfolio from '../data/portfolio';
+import veloFleetMobileImg from '../assets/projects/velo_fleet_mobile.png';
+
 
 const filters = [
   { id: 'all', label: 'All' },

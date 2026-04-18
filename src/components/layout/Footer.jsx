@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import services from '../../data/services';
+import logo from "../../assets/logo.png";
+
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -13,9 +15,11 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2">
-                <span className="font-display text-xl font-semibold text-cobalt">
-                  Codery
-                </span>
+                <img
+                  src= {logo}
+                  alt="Codery logo"
+                  className="h-20 w-auto"
+                />
                 <span className="rounded-md bg-navy-mid px-2 py-0.5 text-[10px] uppercase tracking-[0.16em] text-grey">
                   Technology Studio
                 </span>
@@ -25,10 +29,10 @@ const Footer = () => {
                 global teams ship modern software with confidence.
               </p>
               <a
-                href="mailto:contact@codery.lk"
+                href="mailto:support@codery.co.uk"
                 className="focus-ring inline-flex items-center text-sm font-medium text-cyan hover:text-white"
               >
-                contact@codery.lk
+                support@codery.co.uk
               </a>
             </div>
 
@@ -103,10 +107,10 @@ const Footer = () => {
                 Get a Quote
               </Link>
               <a
-                href="mailto:contact@codery.lk"
+                href="mailto:support@codery.co.uk"
                 className="block text-xs text-grey hover:text-white"
               >
-                Prefer email? contact@codery.lk
+                Prefer email? support@codery.co.uk
               </a>
             </div>
           </div>

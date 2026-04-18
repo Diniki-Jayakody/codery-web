@@ -14,6 +14,7 @@ import {
   PenTool,
 } from 'lucide-react';
 import services from '../../data/services';
+import logo from "../../assets/logo.png";
 
 const navLinkClass =
   'relative inline-flex items-center px-3 py-2 text-sm font-medium text-grey hover:text-white focus-ring';
@@ -132,26 +133,12 @@ const Navbar = () => {
             className="flex items-center gap-2 focus-ring"
             aria-label="Codery home"
           >
-            <span className="relative inline-flex items-center font-display text-xl font-semibold text-cobalt">
-              Codery
-              <svg
-                aria-hidden="true"
-                className="ml-1 h-4 w-4 text-cyan"
-                viewBox="0 0 12 12"
-                fill="none"
-              >
-                <path
-                  d="M1.5 2.5H4V1H0V5H1.5V2.5Z"
-                  fill="currentColor"
-                  opacity="0.8"
-                />
-                <path
-                  d="M11 7V3H9.5V5.5H7V7H11Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </Link>
+            <img
+              src= {logo}
+              alt="Codery logo"
+              className="h-40 w-auto"
+            />
+            </Link>
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-6 md:flex">
@@ -209,14 +196,14 @@ const Navbar = () => {
                   </span>
                 )}
               </NavLink>
-              <NavLink to="/contact" className={navLinkClass}>
+              {/* <NavLink to="/contact" className={navLinkClass}>
                 {({ isActive }) => (
                   <span className="relative inline-flex items-center">
                     Contact
                     {isActive && <span className={activeUnderline} />}
                   </span>
                 )}
-              </NavLink>
+              </NavLink> */}
             </div>
             <Link
               to="/contact"

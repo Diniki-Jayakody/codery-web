@@ -3,6 +3,7 @@ import { CheckCircle2, Globe2, Mail, ShieldCheck } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import CTABanner from '../components/ui/CTABanner';
 import services from '../data/services';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [submitted, setSubmitted] = React.useState(false);
@@ -12,25 +13,46 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (submitting) return;
-
+  
     const form = new FormData(e.currentTarget);
     const data = Object.fromEntries(form.entries());
     const nextErrors = {};
-
+  
     if (!data.fullName) nextErrors.fullName = 'Required';
     if (!data.email) nextErrors.email = 'Required';
     if (!data.service) nextErrors.service = 'Required';
     if (!data.description) nextErrors.description = 'Required';
-
+  
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
-
+  
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-      e.currentTarget.reset();
-    }, 600);
+  
+    emailjs
+      .send(
+        "service_m9rpxaq",   
+        "template_fijwrtp",
+        {
+          fullName: data.fullName,
+          company: data.company,
+          email: data.email,
+          budget: data.budget,
+          service: data.service,
+          description: data.description,
+        },
+        "RVmL9YVoic4s7ubhf" 
+      )
+      .then(
+        () => {
+          setSubmitting(false);
+          setSubmitted(true);
+          e.target.reset();
+        },
+        (error) => {
+          console.error("EmailJS error:", error);
+          setSubmitting(false);
+        }
+      );
   };
 
   return (
@@ -250,7 +272,7 @@ const Contact = () => {
                       Codery Pvt Ltd
                     </p>
                     <p className="text-xs text-slate-300">
-                      Colombo, Sri Lanka & remote‑native.
+                      HQ - United Kingdom <p/> Colombo, Sri Lanka & remote‑native. 
                     </p>
                   </div>
                 </div>
@@ -258,10 +280,10 @@ const Contact = () => {
                   <p className="flex items-center gap-2">
                     <Mail className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                     <a
-                      href="mailto:contact@codery.lk"
+                      href="mailto:support@codery.co.uk"
                       className="text-cyan-300 hover:text-white"
                     >
-                      contact@codery.lk
+                        support@codery.co.uk
                     </a>
                   </p>
                   <p>We&apos;re typically online across GMT+5:30 with overlapping EU/UK hours.</p>

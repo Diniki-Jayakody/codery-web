@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/codery-web/",
+  // base: "/codery-web/",
   plugins: [
     react(),
     tailwindcss(),
