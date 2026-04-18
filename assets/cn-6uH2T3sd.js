@@ -1,0 +1,1 @@
+import{d as e}from"./index-rb9QMqm3.js";const n=[["path",{d:"M15 3h6v6",key:"1q9fwt"}],["path",{d:"M10 14 21 3",key:"gplh6r"}],["path",{d:"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",key:"a6xqqp"}]],p=e("external-link",n),i=(...a)=>a.flatMap(t=>typeof t=="string"?t.split(" "):t).filter(Boolean).join(" ");export{p as E,i as c};
