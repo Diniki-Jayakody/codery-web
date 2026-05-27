@@ -17,7 +17,7 @@ import services from '../../data/services';
 import logo from "../../assets/logo.png";
 
 const navLinkClass =
-  'relative inline-flex items-center px-3 py-2 text-sm font-medium text-grey hover:text-white focus-ring';
+  'relative inline-flex items-center px-3 py-2 text-base font-medium text-grey hover:text-slate-900 focus-ring';
 
 const activeUnderline =
   'absolute inset-x-2 -bottom-1 h-[2px] rounded-full bg-gradient-to-r from-cobalt to-cyan';
@@ -59,11 +59,11 @@ const DesktopServicesMega = ({ open }) => {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-navy-mid">
                   <IconComp className="h-4 w-4 text-cyan" aria-hidden="true" />
                 </span>
-                <p className="font-display text-sm font-semibold text-white">
+                <p className="font-display text-base font-semibold text-slate-900">
                   {service.title}
                 </p>
               </div>
-              <p className="line-clamp-2 text-[12px] text-grey">
+              <p className="line-clamp-2 text-sm text-grey">
                 {service.shortDesc}
               </p>
             </Link>
@@ -114,14 +114,14 @@ const Navbar = () => {
         animate={
           scrolled
             ? {
-                backgroundColor: 'rgba(10, 22, 40, 0.92)',
-                backdropFilter: 'blur(18px)',
-                borderBottomColor: 'rgba(26, 107, 255, 0.18)',
+                backgroundColor: 'rgba(245, 248, 253, 0.92)',
+                backdropFilter: 'blur(14px)',
+                borderBottomColor: 'rgba(31, 95, 214, 0.16)',
               }
             : {
-                backgroundColor: 'rgba(10, 22, 40, 0)',
+                backgroundColor: 'rgba(245, 248, 253, 0)',
                 backdropFilter: 'blur(0px)',
-                borderBottomColor: 'rgba(26, 107, 255, 0)',
+                borderBottomColor: 'rgba(31, 95, 214, 0)',
               }
         }
         transition={{ duration: 0.25, ease: 'easeOut' }}
@@ -136,21 +136,28 @@ const Navbar = () => {
             <img
               src= {logo}
               alt="Codery logo"
-              className="h-40 w-auto"
+              className="h-20 w-auto sm:h-24"
             />
             </Link>
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-6 md:flex">
             <div className="flex items-center gap-1">
-              <NavLink to="/" className={navLinkClass}>
-                {({ isActive }) => (
-                  <span className="relative inline-flex items-center">
-                    Home
-                    {isActive && <span className={activeUnderline} />}
-                  </span>
-                )}
-              </NavLink>
+            <NavLink
+              to="/"
+              end
+            >
+              {({ isActive }) => (
+                <span className="relative inline-flex items-center">
+                  Home
+                  <span
+                    className={`block h-[2px] w-full absolute left-0 -bottom-1 bg-gradient-to-r from-cobalt to-cyan transition-all duration-200 ${
+                      isActive ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                </span>
+              )}
+            </NavLink>
               <NavLink to="/about" className={navLinkClass}>
                 {({ isActive }) => (
                   <span className="relative inline-flex items-center">
@@ -196,18 +203,10 @@ const Navbar = () => {
                   </span>
                 )}
               </NavLink>
-              {/* <NavLink to="/contact" className={navLinkClass}>
-                {({ isActive }) => (
-                  <span className="relative inline-flex items-center">
-                    Contact
-                    {isActive && <span className={activeUnderline} />}
-                  </span>
-                )}
-              </NavLink> */}
             </div>
             <Link
               to="/contact"
-              className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-lg bg-gradient-to-r from-cobalt to-cyan px-4 py-2 text-sm font-semibold text-navy shadow-glow-soft transition-transform hover:-translate-y-0.5"
+              className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-lg bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-base font-semibold text-white shadow-glow-soft transition-transform hover:-translate-y-0.5"
             >
               Get a Quote
               <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
@@ -217,7 +216,7 @@ const Navbar = () => {
           {/* Mobile menu toggle */}
           <button
             type="button"
-            className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-lg border border-navy-mid text-grey hover:text-white md:hidden"
+            className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-lg border border-navy-mid text-grey hover:text-slate-900 md:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileOpen}
@@ -233,7 +232,7 @@ const Navbar = () => {
         {/* Mobile overlay */}
         {mobileOpen && (
           <div className="md:hidden">
-            <div className="fixed inset-0 z-40 bg-navy/95" />
+            <div className="fixed inset-0 z-40 bg-slate-950/25 backdrop-blur-sm" />
             <motion.div
               initial={prefersReducedMotion ? false : { opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -257,7 +256,7 @@ const Navbar = () => {
                   >
                     <NavLink
                       to={item.to}
-                      className="block rounded-lg px-2 py-3 text-lg font-medium text-grey hover:bg-navy-mid hover:text-white focus-ring"
+                      className="block rounded-lg px-2 py-3 text-lg font-medium text-grey hover:bg-navy-mid hover:text-slate-900 focus-ring"
                     >
                       {item.label}
                     </NavLink>
@@ -272,7 +271,7 @@ const Navbar = () => {
                     duration: 0.22,
                     delay: prefersReducedMotion ? 0 : 0.15,
                   }}
-                  className="rounded-xl border border-navy-mid bg-navy-light/60"
+                  className="rounded-xl border border-navy-mid bg-white/95"
                 >
                   <button
                     type="button"
@@ -302,7 +301,7 @@ const Navbar = () => {
                         >
                           <NavLink
                             to={`/services/${service.slug}`}
-                            className="flex items-center gap-3 px-4 py-2.5 text-sm text-grey hover:bg-navy-mid hover:text-white focus-ring"
+                            className="flex items-center gap-3 px-4 py-2.5 text-base text-grey hover:bg-navy-mid hover:text-slate-900 focus-ring"
                           >
                             <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-navy-mid/80">
                               <Code2 className="h-4 w-4 text-cyan" />
@@ -331,7 +330,7 @@ const Navbar = () => {
                   >
                     <NavLink
                       to={item.to}
-                      className="block rounded-lg px-2 py-3 text-lg font-medium text-grey hover:bg-navy-mid hover:text-white focus-ring"
+                      className="block rounded-lg px-2 py-3 text-lg font-medium text-grey hover:bg-navy-mid hover:text-slate-900 focus-ring"
                     >
                       {item.label}
                     </NavLink>
@@ -349,7 +348,7 @@ const Navbar = () => {
                 >
                   <Link
                     to="/contact"
-                    className="focus-ring inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-cobalt to-cyan px-4 py-3 text-sm font-semibold text-navy shadow-glow-soft"
+                    className="focus-ring inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-cobalt to-cyan px-4 py-3 text-base font-semibold text-white shadow-glow-soft"
                   >
                     Get a Quote
                     <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />

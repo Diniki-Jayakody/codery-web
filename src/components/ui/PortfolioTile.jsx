@@ -14,7 +14,7 @@ const PortfolioTile = ({ title, type, imageUrl, liveUrl, tech = [] }) => {
     >
       <div className="relative overflow-hidden">
         <div className="relative aspect-[4/3] w-full bg-navy-mid">
-          <div className="pointer-events-none absolute inset-x-4 top-3 z-10 flex items-center justify-between rounded-t-lg border border-navy-mid/80 bg-navy/80 px-3 py-1 text-[10px] text-grey">
+          <div className="pointer-events-none absolute inset-x-4 top-3 z-10 flex items-center justify-between rounded-t-lg border border-navy-mid/80 bg-white/90 px-3 py-1 text-xs text-grey">
             <div className="flex items-center gap-1">
               <span className="h-2 w-2 rounded-full bg-red-500" />
               <span className="h-2 w-2 rounded-full bg-yellow-400" />
@@ -33,7 +33,7 @@ const PortfolioTile = ({ title, type, imageUrl, liveUrl, tech = [] }) => {
             height="600"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-4 px-5 pb-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
             <p className="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan">
               Featured Case Study
@@ -69,7 +69,7 @@ const PortfolioTile = ({ title, type, imageUrl, liveUrl, tech = [] }) => {
             href={liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="focus-ring mt-auto inline-flex min-h-[44px] items-center justify-center rounded-full border border-cyan/40 px-4 py-2 text-xs font-medium text-cyan transition-colors hover:border-cyan hover:text-white"
+            className="focus-ring mt-auto inline-flex min-h-[48px] items-center justify-center rounded-full border border-cobalt/50 px-4 py-2 text-sm font-medium text-cobalt transition-colors hover:border-cyan hover:text-slate-900"
           >
             Visit Live Site
           </a>

@@ -16,11 +16,11 @@ const Services = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1
             id="services-hero-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-white"
+            className="font-display text-3xl sm:text-4xl md:text-5xl text-slate-900"
           >
             Services
           </h1>
-          <p className="mt-4 max-w-2xl text-sm sm:text-base text-grey">
+          <p className="mt-4 max-w-2xl text-base sm:text-lg text-grey">
             Codery blends product thinking, UX design, and engineering depth to help
             teams launch and scale digital products with confidence.
           </p>
@@ -30,11 +30,9 @@ const Services = () => {
       {/* Intro */}
       <section className="pb-12 sm:pb-16 lg:pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="max-w-3xl text-sm text-grey">
-            Every engagement is tailored to your stage, stack, and internal capabilities.
-            We can own delivery end‑to‑end or embed as an extension of your existing
-            teams. Our focus is always the same: pragmatic, maintainable solutions that
-            respect your constraints.
+          <p className="max-w-3xl text-base text-grey">
+            Every engagement is tailored to your stage, stack, and team setup. We can
+            lead delivery end-to-end or embed with your existing team.
           </p>
         </div>
       </section>
@@ -64,11 +62,11 @@ const Services = () => {
               />
             ))}
           </div>
-          <div className="mt-8 text-sm text-grey">
+          <div className="mt-8 text-base text-grey">
             Can&apos;t find what you need?{' '}
             <Link
               to="/contact"
-              className="font-medium text-cyan hover:text-white focus-ring"
+              className="font-medium text-cobalt hover:text-slate-900 focus-ring"
             >
               Let&apos;s talk about a custom engagement.
             </Link>

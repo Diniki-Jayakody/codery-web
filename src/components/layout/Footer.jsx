@@ -8,7 +8,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 border-t border-navy-mid bg-navy-light">
+    <footer className="mt-20 border-t border-navy-mid bg-navy-light">
       <div className="relative">
         <div className="pointer-events-none absolute inset-0 dot-grid" />
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -20,17 +20,17 @@ const Footer = () => {
                   alt="Codery logo"
                   className="h-20 w-auto"
                 />
-                <span className="rounded-md bg-navy-mid px-2 py-0.5 text-[10px] uppercase tracking-[0.16em] text-grey">
+                <span className="rounded-md bg-navy-mid px-2 py-0.5 text-xs uppercase tracking-[0.14em] text-grey">
                   Technology Studio
                 </span>
               </div>
-              <p className="text-sm text-grey">
-                Codery Pvt Ltd is a Sri Lanka–based technology partner helping
-                global teams ship modern software with confidence.
+              <p className="text-base text-grey">
+                Codery is a Sri Lanka-based technology partner helping global teams
+                design, build, and scale modern digital products.
               </p>
               <a
                 href="mailto:support@codery.co.uk"
-                className="focus-ring inline-flex items-center text-sm font-medium text-cyan hover:text-white"
+                className="focus-ring inline-flex items-center text-base font-medium text-cobalt hover:text-slate-900"
               >
                 support@codery.co.uk
               </a>
@@ -40,34 +40,34 @@ const Footer = () => {
               <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-grey-light">
                 Quick Links
               </h3>
-              <ul className="space-y-2 text-sm text-grey">
+              <ul className="space-y-2 text-base text-grey">
                 <li>
-                  <Link to="/" className="hover:text-white focus-ring">
+                  <Link to="/" className="hover:text-slate-900 focus-ring">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:text-white focus-ring">
+                  <Link to="/about" className="hover:text-slate-900 focus-ring">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="hover:text-white focus-ring">
+                  <Link to="/services" className="hover:text-slate-900 focus-ring">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/hire-talent" className="hover:text-white focus-ring">
+                  <Link to="/hire-talent" className="hover:text-slate-900 focus-ring">
                     Hire Talent
                   </Link>
                 </li>
                 <li>
-                  <Link to="/portfolio" className="hover:text-white focus-ring">
+                  <Link to="/portfolio" className="hover:text-slate-900 focus-ring">
                     Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="hover:text-white focus-ring">
+                  <Link to="/contact" className="hover:text-slate-900 focus-ring">
                     Contact
                   </Link>
                 </li>
@@ -78,12 +78,12 @@ const Footer = () => {
               <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-grey-light">
                 Services
               </h3>
-              <ul className="space-y-2 text-sm text-grey">
+              <ul className="space-y-2 text-base text-grey">
                 {services.map((service) => (
                   <li key={service.slug}>
                     <Link
                       to={`/services/${service.slug}`}
-                      className="hover:text-white focus-ring"
+                      className="hover:text-slate-900 focus-ring"
                     >
                       {service.title}
                     </Link>
@@ -96,26 +96,25 @@ const Footer = () => {
               <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-grey-light">
                 Let&apos;s Work Together
               </h3>
-              <p className="text-sm text-grey">
-                Share your roadmap, constraints, and ambitions. We&apos;ll help you
-                design the right path forward.
+              <p className="text-base text-grey">
+                Share your roadmap and goals. We&apos;ll suggest practical next steps.
               </p>
               <Link
                 to="/contact"
-                className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-sm font-semibold text-navy shadow-glow-soft"
+                className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-base font-semibold text-white shadow-glow-soft"
               >
                 Get a Quote
               </Link>
               <a
                 href="mailto:support@codery.co.uk"
-                className="block text-xs text-grey hover:text-white"
+                className="block text-sm text-grey hover:text-slate-900"
               >
                 Prefer email? support@codery.co.uk
               </a>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-navy-mid pt-6 text-xs text-grey sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-navy-mid pt-6 text-sm text-grey sm:flex-row">
             <p>© {year} Codery Pvt Ltd. All rights reserved.</p>
             <p>
               Partnered Company 

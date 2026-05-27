@@ -58,21 +58,21 @@ const ServiceDetail = () => {
       <main className="pt-24 sm:pt-28 lg:pt-32">
         <section className="pb-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-3xl text-white">Service not found</h1>
-            <p className="mt-3 text-sm text-gray-400">
+            <h1 className="font-display text-3xl text-slate-900">Service not found</h1>
+            <p className="mt-3 text-base text-grey">
               We couldn&apos;t find the service you were looking for. Explore all our
               capabilities or reach out to discuss a custom engagement.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center rounded-full border border-blue-500 px-5 py-2 text-sm font-semibold text-blue-400 hover:border-blue-400 hover:text-blue-300"
+                className="inline-flex items-center justify-center rounded-full border border-cobalt/50 px-5 py-2 text-base font-semibold text-cobalt hover:border-cyan hover:text-cyan"
               >
                 View all services
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2 text-sm font-semibold text-slate-900"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-base font-semibold text-white"
               >
                 Contact us
               </Link>
@@ -93,21 +93,21 @@ const ServiceDetail = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-blue-400">
+              <p className="text-sm font-medium uppercase tracking-[0.16em] text-cobalt">
                 Service
               </p>
               <div className="mt-3 inline-flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy-mid">
                   <ServiceIcon className="h-5 w-5 text-cyan-400" aria-hidden="true" />
                 </span>
                 <h1
                   id="service-detail-heading"
-                  className="font-display text-3xl sm:text-4xl md:text-5xl text-white"
+                  className="font-display text-3xl sm:text-4xl md:text-5xl text-slate-900"
                 >
                   {service.title}
                 </h1>
               </div>
-              <p className="mt-4 max-w-2xl text-sm sm:text-base text-gray-300">
+              <p className="mt-4 max-w-2xl text-base sm:text-lg text-grey">
                 {service.fullDesc}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
@@ -117,15 +117,15 @@ const ServiceDetail = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-6">
-              <h2 className="font-display text-base font-semibold text-white">
+            <div className="rounded-2xl border border-navy-mid bg-white p-6">
+              <h2 className="font-display text-lg font-semibold text-slate-900">
                 When this service is a good fit
               </h2>
-              <p className="mt-2 text-sm text-gray-300">
+              <p className="mt-2 text-base text-grey">
                 Use {service.title.toLowerCase()} when you&apos;re looking to unlock
                 meaningful business value, not just check a technical box.
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-300">
+              <ul className="mt-4 space-y-2 text-base text-grey">
                 <li>• You have clear goals but need help shaping the path.</li>
                 <li>• You care about maintainability and handover as much as launch.</li>
                 <li>• You want a partner who will challenge assumptions when needed.</li>
@@ -133,13 +133,13 @@ const ServiceDetail = () => {
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full bg-blue-500 px-5 py-2 text-sm font-semibold text-slate-900 sm:flex-none"
+                  className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-base font-semibold text-white sm:flex-none"
                 >
                   Talk about this service
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full border border-blue-500 px-5 py-2 text-sm font-semibold text-blue-400 hover:border-blue-400 hover:text-blue-300 sm:flex-none"
+                  className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full border border-cobalt/50 px-5 py-2 text-base font-semibold text-cobalt hover:border-cyan hover:text-cyan sm:flex-none"
                 >
                   View all services
                 </Link>
@@ -165,15 +165,15 @@ const ServiceDetail = () => {
               return (
                 <article
                   key={feature.title}
-                  className="rounded-xl border border-slate-800 bg-slate-950/70 p-5"
+                  className="rounded-xl border border-navy-mid bg-white p-5"
                 >
-                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900">
+                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-navy-mid">
                     <Icon className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-3 font-display text-base font-semibold text-white">
+                  <h3 className="mt-3 font-display text-lg font-semibold text-slate-900">
                     {feature.title}
                   </h3>
-                  <p className="mt-1 text-sm text-gray-300">{feature.desc}</p>
+                  <p className="mt-1 text-base text-grey">{feature.desc}</p>
                 </article>
               );
             })}
@@ -197,15 +197,15 @@ const ServiceDetail = () => {
               return (
                 <article
                   key={useCase.title}
-                  className="rounded-xl border border-slate-800 bg-slate-950/70 p-5"
+                  className="rounded-xl border border-navy-mid bg-white p-5"
                 >
-                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900">
+                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-navy-mid">
                     <Icon className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-3 font-display text-base font-semibold text-white">
+                  <h3 className="mt-3 font-display text-lg font-semibold text-slate-900">
                     {useCase.title}
                   </h3>
-                  <p className="mt-1 text-sm text-gray-300">{useCase.desc}</p>
+                  <p className="mt-1 text-base text-grey">{useCase.desc}</p>
                 </article>
               );
             })}
@@ -243,7 +243,7 @@ const ServiceDetail = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <CTABanner
             heading="Exploring Whether This Service Fits?"
-            subtext="Tell us about your current architecture, constraints, and goals. We’ll help you understand if this service—and how we’d apply it—makes sense."
+            subtext="Tell us about your architecture, constraints, and goals. We&apos;ll explain whether this service is the right fit."
             buttonLabel="Discuss Your Context"
             link="/contact"
           />

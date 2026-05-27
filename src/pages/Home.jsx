@@ -50,7 +50,7 @@ const Hero = () => {
       </div>
       <div className="mx-auto flex max-w-7xl flex-col items-center px-4 sm:px-6 lg:flex-row lg:px-8">
         <div className="relative w-full max-w-xl lg:w-3/5 lg:max-w-none">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/40 bg-navy-mid/60 px-3 py-1 text-xs text-grey">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/30 bg-navy-mid/70 px-3 py-1 text-sm text-grey">
             <span className="text-lg">🌐</span>
             <span className="font-medium text-grey-light">
               Global Technology Partner
@@ -58,7 +58,7 @@ const Hero = () => {
           </div>
           <h1
             id="home-hero-heading"
-            className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white"
+            className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-slate-900"
           >
             {words.map((word, idx) => {
               const isGradient = word === 'Digital' || word === 'Solutions';
@@ -94,9 +94,9 @@ const Hero = () => {
               );
             })}
           </h1>
-          <p className="mt-4 max-w-md text-sm sm:text-base text-grey">
+          <p className="mt-4 max-w-lg text-base sm:text-lg text-grey">
             Software development, digital solutions, and global talent services for
-            businesses worldwide. Built from Colombo, trusted across continents.
+            growing businesses. Built in Colombo, trusted internationally.
           </p>
           <motion.div
             initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
@@ -110,14 +110,14 @@ const Hero = () => {
           >
             <Link
               to="/services"
-              className="focus-ring inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-sm font-semibold text-navy shadow-glow-soft sm:flex-none sm:px-7"
+              className="focus-ring inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-base font-semibold text-white shadow-glow-soft sm:flex-none sm:px-7"
             >
               Explore Our Services
               <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
             </Link>
             <Link
               to="/hire-talent"
-              className="focus-ring inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full border border-cobalt/50 bg-navy-mid/40 px-6 py-3 text-sm font-semibold text-white hover:border-cyan sm:flex-none sm:px-7"
+              className="focus-ring inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full border border-cobalt/40 bg-white px-6 py-3 text-base font-semibold text-slate-900 hover:border-cyan sm:flex-none sm:px-7"
             >
               Hire Global Talent
             </Link>
@@ -126,7 +126,7 @@ const Hero = () => {
 
         <div className="relative mt-10 w-full lg:mt-0 lg:w-2/5">
           <motion.div
-            className="mx-auto flex h-72 w-72 max-w-full items-center justify-center rounded-full border border-cyan/40 bg-gradient-to-br from-navy-mid via-navy to-navy-mid shadow-glow-soft"
+            className="mx-auto flex h-72 w-72 max-w-full items-center justify-center rounded-full border border-cyan/30 bg-gradient-to-br from-navy-mid via-white to-navy-mid shadow-glow-soft"
             animate={prefersReducedMotion ? undefined : { y: [0, -12, 0] }}
             transition={
               prefersReducedMotion
@@ -142,12 +142,12 @@ const Hero = () => {
               <Code2 className="relative h-12 w-12 text-cyan" aria-hidden="true" />
             </div>
           </motion.div>
-          <div className="pointer-events-none absolute inset-x-10 -bottom-8 flex items-center justify-between text-xs text-grey">
-            <span className="inline-flex items-center gap-1 rounded-full bg-navy-mid/80 px-3 py-1">
+          <div className="pointer-events-none absolute inset-x-10 -bottom-8 flex items-center justify-between text-sm text-grey">
+            <span className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1">
               <Globe2 className="h-3.5 w-3.5 text-cyan" />
               5+ Countries Served
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-navy-mid/80 px-3 py-1">
+            <span className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1">
               <Users2 className="h-3.5 w-3.5 text-cyan" />
               Dedicated Teams
             </span>
@@ -155,7 +155,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="mt-12 flex justify-center">
-        <ArrowDown className="h-5 w-5 animate-bounce text-grey" aria-hidden="true" />
+        <ArrowDown className="h-5 w-5 animate-bounce text-grey-light" aria-hidden="true" />
         <span className="sr-only">Scroll to explore more</span>
       </div>
     </section>
@@ -185,16 +185,16 @@ const Home = () => {
       {/* Marquee */}
       <section
         aria-label="Core services marquee"
-        className="border-y border-cobalt/20 bg-navy-light/60 py-3"
+        className="border-y border-cobalt/20 bg-white/80 py-3"
       >
         <div className="mx-auto flex max-w-7xl items-center gap-3 overflow-hidden px-4 sm:px-6 lg:px-8">
-          <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-grey sm:inline">
+          <span className="hidden text-xs font-medium uppercase tracking-[0.18em] text-grey sm:inline">
             Capabilities
           </span>
           <div className="relative flex-1 overflow-hidden">
             <div
               ref={marqueeRef}
-              className={`marquee flex items-center gap-6 text-[13px] font-medium text-grey ${
+              className={`marquee flex items-center gap-6 text-sm font-medium text-grey ${
                 prefersReducedMotion ? 'animate-none' : ''
               }`}
             >
@@ -220,7 +220,7 @@ const Home = () => {
           <SectionHeading
             eyebrow="Our Solutions"
             title="Everything Your Business Needs"
-            subtitle="From greenfield builds to long-term product partnerships, Codery brings the engineering depth and design care your roadmap deserves."
+            subtitle="From new builds to long-term product support, Codery brings engineering depth and practical design."
             align="center"
             gradientWord="Business"
           />
@@ -256,7 +256,7 @@ const Home = () => {
             <SectionHeading
               eyebrow="Why Choose Codery"
               title="Technology Partner, Not Just a Vendor"
-              subtitle="We embed with your teams, challenge assumptions, and care about long‑term outcomes as much as short‑term launches."
+              subtitle="We embed with your team, challenge assumptions, and focus on long-term outcomes."
               align="left"
               gradientWord="Partner"
             />
@@ -286,8 +286,8 @@ const Home = () => {
                 <div key={item.title} className="flex gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-cyan" />
                   <div>
-                    <p className="font-medium text-white">{item.title}</p>
-                    <p className="text-sm text-grey">{item.desc}</p>
+                    <p className="font-medium text-slate-900">{item.title}</p>
+                    <p className="text-base text-grey">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -301,34 +301,34 @@ const Home = () => {
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cobalt to-cyan/80">
                   <Code2 className="h-5 w-5 text-navy" />
                 </div>
-                <p className="max-w-sm text-sm text-grey">
+                <p className="max-w-sm text-base text-grey">
                   We combine engineering depth, thoughtful UX, and a product mindset to
                   help you ship systems that stand the test of time.
                 </p>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                  <div className="glass rounded-xl p-4 text-sm">
-                    <p className="text-xs text-grey">Projects</p>
-                    <p className="mt-1 font-display text-xl text-white">
+                  <div className="glass rounded-xl p-4 text-base">
+                    <p className="text-sm text-grey">Projects</p>
+                    <p className="mt-1 font-display text-xl text-slate-900">
                       50+
                     </p>
-                    <p className="mt-1 text-xs text-grey-light">Delivered across industries</p>
+                    <p className="mt-1 text-sm text-grey-light">Delivered across industries</p>
                   </div>
-                  <div className="glass rounded-xl p-4 text-sm">
-                    <p className="text-xs text-grey">Countries</p>
-                    <p className="mt-1 font-display text-xl text-white">
+                  <div className="glass rounded-xl p-4 text-base">
+                    <p className="text-sm text-grey">Countries</p>
+                    <p className="mt-1 font-display text-xl text-slate-900">
                       5+
                     </p>
-                    <p className="mt-1 text-xs text-grey-light">Clients across the globe</p>
+                    <p className="mt-1 text-sm text-grey-light">Clients across the globe</p>
                   </div>
-                  <div className="glass rounded-xl p-4 text-sm">
-                    <p className="text-xs text-grey">Support</p>
-                    <p className="mt-1 font-display text-xl text-white">
+                  <div className="glass rounded-xl p-4 text-base">
+                    <p className="text-sm text-grey">Support</p>
+                    <p className="mt-1 font-display text-xl text-slate-900">
                       24/7
                     </p>
-                    <p className="mt-1 text-xs text-grey-light">Production support options</p>
+                    <p className="mt-1 text-sm text-grey-light">Production support options</p>
                   </div>
                 </div>
-                <div className="mt-2 flex flex-wrap gap-3 text-xs text-grey">
+                <div className="mt-2 flex flex-wrap gap-3 text-sm text-grey">
                   <span className="inline-flex items-center gap-1 rounded-full bg-navy-mid px-2 py-1">
                     <Globe2 className="h-3.5 w-3.5 text-cyan" />
                     Remote‑native collaboration
@@ -388,7 +388,7 @@ const Home = () => {
           <SectionHeading
             eyebrow="Our Work"
             title="Projects We're Proud Of"
-            subtitle="A sample of the platforms, products, and experiences we have partnered on with teams around the world."
+            subtitle="A sample of the platforms and products we have delivered with teams around the world."
             align="center"
             gradientWord="Proud"
           />
@@ -414,7 +414,7 @@ const Home = () => {
           <div className="mt-8 flex justify-center">
             <Link
               to="/portfolio"
-              className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full border border-cobalt/60 px-5 py-2 text-sm font-semibold text-cobalt hover:border-cyan hover:text-cyan"
+              className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full border border-cobalt/60 px-5 py-2 text-base font-semibold text-cobalt hover:border-cyan hover:text-cyan"
             >
               View All Projects
             </Link>
@@ -432,32 +432,32 @@ const Home = () => {
             <SectionHeading
               eyebrow="Sri Lankan Talent"
               title="Access World-Class Sri Lankan Tech Talent"
-              subtitle="Build long‑term capacity with engineers, designers, and product leaders who have shipped complex systems for global teams."
+              subtitle="Build long-term capacity with engineers, designers, and product leaders experienced in global delivery."
               align="left"
               gradientWord="World"
             />
-            <p className="mt-5 text-sm text-grey">
+            <p className="mt-5 text-base text-grey">
               Whether you need a single engineer or a fully cross‑functional team, we
               match you with people who fit your stack, culture, and time zone.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs text-grey">
-              <span className="inline-flex items-center gap-1 rounded-full bg-navy-mid px-3 py-1">
+            <div className="mt-6 flex flex-wrap gap-3 text-sm text-grey">
+              <span className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1">
                 Proven communication with international stakeholders
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-navy-mid px-3 py-1">
+              <span className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1">
                 Embedded in your ceremonies and tools
               </span>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 to="/hire-talent"
-                className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-sm font-semibold text-navy shadow-glow-soft"
+                className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-base font-semibold text-white shadow-glow-soft"
               >
                 Explore Engagement Models
               </Link>
               <Link
                 to="/contact"
-                className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full border border-cobalt/50 px-6 py-3 text-sm font-semibold text-white hover:border-cyan"
+                className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full border border-cobalt/50 px-6 py-3 text-base font-semibold text-slate-900 hover:border-cyan"
               >
                 Talk to us
               </Link>
@@ -508,7 +508,7 @@ const Home = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <CTABanner
             heading="Ready to Build Something Great?"
-            subtext="Let’s discuss your roadmap, constraints, and the outcomes you’re aiming for. We’ll bring options, not just estimates."
+            subtext="Let&apos;s discuss your roadmap and priorities. We&apos;ll bring practical options, not generic estimates."
             buttonLabel="Start a Conversation"
             link="/contact"
           />

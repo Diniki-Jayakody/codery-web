@@ -7,18 +7,18 @@ const CTABanner = ({ heading, subtext, buttonLabel, link }) => {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-cobalt/60 via-navy-mid to-cyan/40 p-8 sm:p-10 lg:p-12">
+    <section className="relative overflow-hidden rounded-2xl border border-cobalt/15 bg-gradient-to-br from-cobalt/10 via-white to-cyan/10 p-8 sm:p-10 lg:p-12">
       <div className="pointer-events-none absolute -inset-32 opacity-40">
         <div className="hero-orb hero-orb--cobalt" />
         <div className="hero-orb hero-orb--cyan" />
       </div>
       <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl">
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-white">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-slate-900">
             {heading}
           </h2>
           {subtext && (
-            <p className="mt-3 text-sm sm:text-base text-grey">
+            <p className="mt-3 text-base sm:text-lg text-grey">
               {subtext}
             </p>
           )}
@@ -32,7 +32,7 @@ const CTABanner = ({ heading, subtext, buttonLabel, link }) => {
           )}
           <Link
             to={link}
-            className="focus-ring inline-flex min-h-[44px] min-w-[180px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-sm font-semibold text-navy shadow-glow-soft transition-transform hover:-translate-y-0.5"
+            className="focus-ring inline-flex min-h-[48px] min-w-[190px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-base font-semibold text-white shadow-glow-soft transition-transform hover:-translate-y-0.5"
           >
             {buttonLabel}
           </Link>

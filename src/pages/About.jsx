@@ -33,14 +33,14 @@ const About = () => {
           <div className="max-w-2xl">
             <h1
               id="about-hero-heading"
-              className="font-display text-3xl sm:text-4xl md:text-5xl text-white"
+              className="font-display text-3xl sm:text-4xl md:text-5xl text-slate-900"
             >
               About Codery
             </h1>
             <div className="mt-2 h-1 w-24 rounded-full bg-gradient-to-r from-cobalt to-cyan" />
-            <p className="mt-4 text-sm sm:text-base text-grey">
-              Codery is a Sri Lanka–based technology company partnering with global teams to
-              design, build, and scale modern digital products.
+            <p className="mt-4 text-base sm:text-lg text-grey">
+              Codery is a Sri Lanka-based technology partner helping global teams design,
+              build, and scale modern digital products.
             </p>
           </div>
         </div>
@@ -63,11 +63,10 @@ const About = () => {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy-mid">
                 <Eye className="h-5 w-5 text-cyan" />
               </div>
-              <h2 className="mt-4 font-display text-xl text-white">Our Vision</h2>
-              <p className="mt-2 text-sm text-grey">
-                To be the trusted engineering backbone for ambitious companies around the
-                world, helping them ship software that feels as good to operate as it does
-                to use.
+              <h2 className="mt-4 font-display text-2xl text-slate-900">Our Vision</h2>
+              <p className="mt-2 text-base text-grey">
+                To be a trusted engineering partner for ambitious companies building
+                reliable, user-friendly software.
               </p>
             </motion.article>
 
@@ -81,10 +80,10 @@ const About = () => {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy-mid">
                 <Target className="h-5 w-5 text-cyan" />
               </div>
-              <h2 className="mt-4 font-display text-xl text-white">Our Mission</h2>
-              <p className="mt-2 text-sm text-grey">
-                To pair world‑class Sri Lankan talent with thoughtful processes and
-                product thinking so our partners can focus on outcomes, not just outputs.
+              <h2 className="mt-4 font-display text-2xl text-slate-900">Our Mission</h2>
+              <p className="mt-2 text-base text-grey">
+                To pair world-class Sri Lankan talent with practical delivery processes so
+                our partners can focus on outcomes.
               </p>
             </motion.article>
           </div>
@@ -101,32 +100,26 @@ const About = () => {
             <div className="flex items-start">
               <figure className="glass relative rounded-2xl p-6">
                 <div className="absolute inset-0 bg-radial-orb-cobalt opacity-60" />
-                <blockquote className="relative text-lg font-medium text-white">
+                <blockquote className="relative text-xl font-medium text-slate-900">
                   “Technology Partner, Not Just a Vendor”
                 </blockquote>
-                <figcaption className="relative mt-3 text-xs text-grey">
+                <figcaption className="relative mt-3 text-sm text-grey">
                   The principle that guides how we hire, collaborate, and ship.
                 </figcaption>
               </figure>
             </div>
-            <div className="space-y-4 text-sm text-grey">
+            <div className="space-y-4 text-base text-grey">
               <p>
-                Codery was founded with a simple belief: great software outcomes come from
-                long‑term, trust‑based partnerships between product and engineering teams.
-                Sri Lanka has a deep pool of engineering talent, but much of it has been
-                under‑represented in global product builds.
+                Codery was founded on a simple belief: strong software outcomes come from
+                long-term partnerships between product and engineering teams.
               </p>
               <p>
-                We set out to change that by building a studio that combines senior hands‑on
-                engineers, thoughtful UX designers, and product‑minded leaders. Teams that
-                understand how to work with distributed stakeholders, align on goals, and
-                operate in production—not just ship the first version.
+                We bring together senior engineers, UX designers, and product-minded
+                leaders who work comfortably with distributed stakeholders.
               </p>
               <p>
-                Today, we work with clients across multiple continents, embedding into their
-                rituals, tools, and culture. We care about the systems we leave behind: clear
-                architecture, excellent documentation, and teams who know how to keep
-                evolving what we&apos;ve built together.
+                Today, we support teams across multiple regions with clear architecture,
+                solid documentation, and practical handover.
               </p>
             </div>
           </div>
@@ -142,7 +135,7 @@ const About = () => {
           <SectionHeading
             eyebrow="Our Values"
             title="Principles That Shape Our Work"
-            subtitle="How we show up for our partners, our craft, and each other—on every project, every day."
+            subtitle="How we work with our partners, our craft, and each other on every project."
             align="left"
             gradientWord="Shape"
           />
@@ -186,10 +179,10 @@ const About = () => {
                 <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-navy-mid">
                   <Icon className="h-4 w-4 text-cyan" />
                 </div>
-                <h3 className="font-display text-base font-semibold text-white">
+                <h3 className="font-display text-lg font-semibold text-slate-900">
                   {title}
                 </h3>
-                <p className="text-sm text-grey">{desc}</p>
+                <p className="text-base text-grey">{desc}</p>
               </article>
             ))}
           </div>
@@ -215,8 +208,8 @@ const About = () => {
       <section className="pb-20 pt-12 sm:pb-24 lg:pb-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <CTABanner
-            heading="Let’s Explore What We Could Build Together"
-            subtext="Share where you are today and where you’re trying to go. We’ll respond with pragmatic options, not a generic sales deck."
+            heading="Let&apos;s Explore What We Could Build Together"
+            subtext="Share where you are today and where you want to go. We&apos;ll respond with clear, practical options."
             buttonLabel="Talk to the Team"
             link="/contact"
           />

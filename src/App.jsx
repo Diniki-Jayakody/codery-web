@@ -38,7 +38,7 @@ function App() {
         Skip to content
       </a>
 
-      <div className="flex min-h-screen flex-col bg-navy text-white">
+      <div className="flex min-h-screen flex-col bg-navy text-slate-900">
         <Navbar />
         <div id="main-content" className="flex-1">
           <Suspense fallback={<SkeletonPage />}>

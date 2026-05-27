@@ -25,13 +25,13 @@ const ServiceCard = ({ icon, title, description, link, index = 0 }) => {
         'transition-transform duration-200 ease-out'
       )}
     >
-      <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-cobalt to-cyan/70">
+      <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-cobalt to-cyan/80">
         {getIcon(icon)}
       </div>
-      <h3 className="mb-2 font-display text-lg font-semibold text-white">
+      <h3 className="mb-2 font-display text-xl font-semibold text-slate-900">
         {title}
       </h3>
-      <p className="mb-4 text-sm text-grey">
+      <p className="mb-5 text-base text-grey">
         {description}
       </p>
       <div className="mt-auto">

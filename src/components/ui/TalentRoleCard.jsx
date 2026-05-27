@@ -19,12 +19,12 @@ const TalentRoleCard = ({ role, skills = [], available }) => {
           <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-navy-mid">
             {getIcon(role.includes('Engineer') ? 'Code2' : 'UserCog')}
           </div>
-          <h3 className="font-display text-base font-semibold text-white">
+          <h3 className="font-display text-lg font-semibold text-slate-900">
             {role}
           </h3>
         </div>
         {available && (
-          <span className="inline-flex items-center gap-1 rounded-full bg-mint/10 px-2.5 py-1 text-[11px] font-medium text-mint">
+          <span className="inline-flex items-center gap-1 rounded-full bg-mint/10 px-2.5 py-1 text-xs font-medium text-mint">
             <span className="h-1.5 w-1.5 rounded-full bg-mint" />
             Available
           </span>

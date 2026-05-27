@@ -31,11 +31,11 @@ const Portfolio = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1
             id="portfolio-hero-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-white"
+            className="font-display text-3xl sm:text-4xl md:text-5xl text-slate-900"
           >
             Our Work Speaks for Itself
           </h1>
-          <p className="mt-4 max-w-2xl text-sm sm:text-base text-grey">
+          <p className="mt-4 max-w-2xl text-base sm:text-lg text-grey">
             A sample of the platforms, products, and experiences we&apos;ve partnered
             on with teams in the UK, Europe, and beyond.
           </p>
@@ -56,14 +56,14 @@ const Portfolio = () => {
               align="left"
               gradientWord="Selected"
             />
-            <div className="inline-flex rounded-full bg-slate-900/80 p-1 text-xs text-grey">
+            <div className="inline-flex rounded-full border border-navy-mid bg-white p-1 text-sm text-grey">
               {filters.map((filter) => (
                 <button
                   key={filter.id}
                   type="button"
                   onClick={() => setActiveFilter(filter.id)}
                   className={`focus-ring relative inline-flex items-center justify-center rounded-full px-3 py-1.5 font-medium transition-colors ${
-                    activeFilter === filter.id ? 'bg-blue-600 text-slate-950' : ''
+                    activeFilter === filter.id ? 'bg-cobalt text-white' : ''
                   }`}
                 >
                   <span className="relative z-10">{filter.label}</span>

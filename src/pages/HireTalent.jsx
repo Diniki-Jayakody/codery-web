@@ -69,16 +69,16 @@ const HireTalent = () => {
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-cobalt">
+            <p className="text-sm font-medium uppercase tracking-[0.16em] text-cobalt">
               Hire Sri Lankan Talent
             </p>
             <h1
               id="hire-hero-heading"
-              className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl text-white"
+              className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl text-slate-900"
             >
               Hire World‑Class Tech Talent from Sri Lanka
             </h1>
-            <p className="mt-4 text-sm sm:text-base text-grey">
+            <p className="mt-4 text-base sm:text-lg text-grey">
               Build long‑term capacity with engineers, designers, and product leaders who
               have shipped complex systems with global teams—without the overhead of
               building everything in‑house.
@@ -87,14 +87,14 @@ const HireTalent = () => {
               <button
                 type="button"
                 onClick={() => scrollTo('available-roles')}
-                className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg"
+                className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-base font-semibold text-white shadow-glow-soft"
               >
                 Browse Talent
               </button>
               <button
                 type="button"
                 onClick={() => scrollTo('engagement-models')}
-                className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full border border-blue-500 px-6 py-3 text-sm font-semibold text-white hover:border-cyan-500"
+                className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full border border-cobalt/50 bg-white px-6 py-3 text-base font-semibold text-slate-900 hover:border-cyan"
               >
                 Build a Team
               </button>
@@ -147,14 +147,14 @@ const HireTalent = () => {
 
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
             <div className="space-y-3">
-              <div className="inline-flex rounded-full bg-slate-900/80 p-1 text-xs text-grey">
+              <div className="inline-flex rounded-full border border-navy-mid bg-white p-1 text-sm text-grey">
                 {engagementModels.map((m) => (
                   <button
                     key={m.id}
                     type="button"
                     onClick={() => setActiveModel(m.id)}
                     className={`focus-ring inline-flex flex-1 items-center justify-center gap-1 rounded-full px-3 py-1.5 font-medium transition-colors ${
-                      activeModel === m.id ? 'bg-blue-600 text-slate-950' : ''
+                      activeModel === m.id ? 'bg-cobalt text-white' : ''
                     }`}
                     aria-pressed={activeModel === m.id}
                   >
@@ -163,19 +163,19 @@ const HireTalent = () => {
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-grey">
+              <p className="text-sm text-grey">
                 Not sure which model fits? We often start small and evolve towards the
                 right structure as we learn together.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-6 sm:p-7">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900">
+            <div className="rounded-2xl border border-navy-mid bg-white p-6 sm:p-7">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy-mid">
                 <model.icon className="h-5 w-5 text-cyan-400" aria-hidden="true" />
               </div>
-              <h2 className="mt-4 font-display text-xl text-white">{model.title}</h2>
-              <p className="mt-2 text-sm text-gray-300">{model.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-300">
+              <h2 className="mt-4 font-display text-2xl text-slate-900">{model.title}</h2>
+              <p className="mt-2 text-base text-grey">{model.description}</p>
+              <ul className="mt-4 space-y-2 text-base text-grey">
                 {model.bullets.map((b) => (
                   <li key={b}>• {b}</li>
                 ))}
@@ -183,7 +183,7 @@ const HireTalent = () => {
               <div className="mt-6">
                 <a
                   href="/contact"
-                  className="focus-ring inline-flex min-h-[44px] items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg"
+                  className="focus-ring inline-flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-base font-semibold text-white shadow-glow-soft"
                 >
                   Get Started
                   <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
@@ -216,7 +216,7 @@ const HireTalent = () => {
             ].map((step, idx) => (
               <React.Fragment key={step.title}>
                 <div className="relative flex items-center">
-                  <div className="relative flex h-9 w-9 items-center justify-center rounded-full border border-blue-500 bg-slate-900 text-sm font-semibold text-blue-400">
+                  <div className="relative flex h-9 w-9 items-center justify-center rounded-full border border-cobalt/50 bg-white text-sm font-semibold text-cobalt">
                     {idx + 1}
                   </div>
                   {idx < 3 && (
@@ -224,8 +224,8 @@ const HireTalent = () => {
                   )}
                 </div>
                 <div>
-                  <h3 className="font-display text-base font-semibold text-white">{step.title}</h3>
-                  <p className="mt-1 text-sm text-grey">{step.desc}</p>
+                  <h3 className="font-display text-lg font-semibold text-slate-900">{step.title}</h3>
+                  <p className="mt-1 text-base text-grey">{step.desc}</p>
                 </div>
               </React.Fragment>
             ))}

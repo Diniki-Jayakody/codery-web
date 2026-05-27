@@ -38,7 +38,7 @@ const StatBlock = ({ number, suffix = '+', label, index = 0 }) => {
         {value}
         {suffix}
       </div>
-      <p className="text-sm text-grey">
+      <p className="text-base text-grey">
         {label}
       </p>
     </div>

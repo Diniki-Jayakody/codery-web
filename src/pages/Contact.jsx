@@ -69,11 +69,11 @@ const Contact = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1
             id="contact-hero-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-white"
+            className="font-display text-3xl sm:text-4xl md:text-5xl text-slate-900"
           >
             Let&apos;s Build Something Together
           </h1>
-          <p className="mt-4 max-w-2xl text-sm sm:text-base text-grey">
+          <p className="mt-4 max-w-2xl text-base sm:text-lg text-grey">
             Share a bit about your project, constraints, and goals. We&apos;ll reply
             with next steps—usually within 24 hours.
           </p>
@@ -95,7 +95,7 @@ const Contact = () => {
               <SectionHeading
                 eyebrow="Project Brief"
                 title="Tell Us About Your Project"
-                subtitle="The more context you share, the better we can suggest the right team, approach, and timelines."
+                subtitle="Share the essentials and we&apos;ll suggest the right team, approach, and timeline."
                 align="left"
                 gradientWord="Project"
               />
@@ -105,7 +105,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="fullName"
-                      className="block text-xs font-medium text-slate-300"
+                      className="block text-sm font-medium text-grey"
                     >
                       Full Name *
                     </label>
@@ -113,10 +113,10 @@ const Contact = () => {
                       id="fullName"
                       name="fullName"
                       type="text"
-                      className={`mt-1 w-full rounded-xl border px-3 py-2 text-sm text-white shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                      className={`mt-1 w-full rounded-xl border px-3 py-2.5 text-base text-slate-900 shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-cobalt ${
                         errors.fullName
-                          ? 'border-red-400 bg-slate-950/80'
-                          : 'border-slate-800 bg-slate-950/70 focus-visible:border-blue-500'
+                          ? 'border-red-400 bg-white'
+                          : 'border-navy-mid bg-white focus-visible:border-cobalt'
                       }`}
                       placeholder="Jane Doe"
                     />
@@ -124,7 +124,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-xs font-medium text-slate-300"
+                      className="block text-sm font-medium text-grey"
                     >
                       Company Name
                     </label>
@@ -132,7 +132,7 @@ const Contact = () => {
                       id="company"
                       name="company"
                       type="text"
-                      className="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950/70 px-3 py-2 text-sm text-white shadow-sm outline-none focus-visible:border-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
+                      className="mt-1 w-full rounded-xl border border-navy-mid bg-white px-3 py-2.5 text-base text-slate-900 shadow-sm outline-none focus-visible:border-cobalt focus-visible:ring-2 focus-visible:ring-cobalt"
                       placeholder="Acme Inc."
                     />
                   </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-xs font-medium text-slate-300"
+                      className="block text-sm font-medium text-grey"
                     >
                       Work Email *
                     </label>
@@ -150,10 +150,10 @@ const Contact = () => {
                       id="email"
                       name="email"
                       type="email"
-                      className={`mt-1 w-full rounded-xl border px-3 py-2 text-sm text-white shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                      className={`mt-1 w-full rounded-xl border px-3 py-2.5 text-base text-slate-900 shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-cobalt ${
                         errors.email
-                          ? 'border-red-400 bg-slate-950/80'
-                          : 'border-slate-800 bg-slate-950/70 focus-visible:border-blue-500'
+                          ? 'border-red-400 bg-white'
+                          : 'border-navy-mid bg-white focus-visible:border-cobalt'
                       }`}
                       placeholder="you@company.com"
                     />
@@ -161,14 +161,14 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="budget"
-                      className="block text-xs font-medium text-slate-300"
+                      className="block text-sm font-medium text-grey"
                     >
                       Budget Range (optional)
                     </label>
                     <select
                       id="budget"
                       name="budget"
-                      className="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950/70 px-3 py-2 text-sm text-white shadow-sm outline-none focus-visible:border-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
+                      className="mt-1 w-full rounded-xl border border-navy-mid bg-white px-3 py-2.5 text-base text-slate-900 shadow-sm outline-none focus-visible:border-cobalt focus-visible:ring-2 focus-visible:ring-cobalt"
                     >
                       <option value="">Select a range</option>
                       <option value="under-25k">Under $25k</option>
@@ -182,17 +182,17 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="service"
-                    className="block text-xs font-medium text-slate-300"
+                    className="block text-sm font-medium text-grey"
                   >
                     Service Interested In *
                   </label>
                   <select
                     id="service"
                     name="service"
-                    className={`mt-1 w-full rounded-xl border px-3 py-2 text-sm text-white shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                    className={`mt-1 w-full rounded-xl border px-3 py-2.5 text-base text-slate-900 shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-cobalt ${
                       errors.service
-                        ? 'border-red-400 bg-slate-950/80'
-                        : 'border-slate-800 bg-slate-950/70 focus-visible:border-blue-500'
+                        ? 'border-red-400 bg-white'
+                        : 'border-navy-mid bg-white focus-visible:border-cobalt'
                     }`}
                   >
                     <option value="">Select a service</option>
@@ -208,7 +208,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="description"
-                    className="block text-xs font-medium text-slate-300"
+                    className="block text-sm font-medium text-grey"
                   >
                     Project Description *
                   </label>
@@ -216,16 +216,16 @@ const Contact = () => {
                     id="description"
                     name="description"
                     rows={5}
-                    className={`mt-1 w-full rounded-xl border px-3 py-2 text-sm text-white shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                    className={`mt-1 w-full rounded-xl border px-3 py-2.5 text-base text-slate-900 shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-cobalt ${
                       errors.description
-                        ? 'border-red-400 bg-slate-950/80'
-                        : 'border-slate-800 bg-slate-950/70 focus-visible:border-blue-500'
+                        ? 'border-red-400 bg-white'
+                        : 'border-navy-mid bg-white focus-visible:border-cobalt'
                     }`}
                     placeholder="Share a bit about your product, timelines, and what success looks like..."
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-300">
+                <div className="flex items-center justify-between text-sm text-grey">
                   <p>We&apos;ll respond within one business day.</p>
                   <p className="flex items-center gap-1">
                     <ShieldCheck className="h-3.5 w-3.5 text-cyan-400" aria-hidden="true" />
@@ -237,7 +237,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="focus-ring inline-flex w-full min-h-[44px] items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+                    className="focus-ring inline-flex w-full min-h-[48px] items-center justify-center rounded-full bg-gradient-to-r from-cobalt to-cyan px-6 py-3 text-base font-semibold text-white shadow-glow-soft disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {submitting ? 'Sending...' : 'Submit Project Brief'}
                   </button>
@@ -268,20 +268,20 @@ const Contact = () => {
                     <Globe2 className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-display text-base font-semibold text-white">
+                    <p className="font-display text-lg font-semibold text-slate-900">
                       Codery Pvt Ltd
                     </p>
-                    <p className="text-xs text-slate-300">
-                      HQ - United Kingdom <p/> Colombo, Sri Lanka & remote‑native. 
+                    <p className="text-sm text-grey">
+                      HQ - United Kingdom. Colombo, Sri Lanka, and remote-native.
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 space-y-2 text-sm text-slate-200">
+                <div className="mt-4 space-y-2 text-base text-grey">
                   <p className="flex items-center gap-2">
                     <Mail className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                     <a
                       href="mailto:support@codery.co.uk"
-                      className="text-cyan-300 hover:text-white"
+                      className="text-cobalt hover:text-slate-900"
                     >
                         support@codery.co.uk
                     </a>
@@ -294,13 +294,13 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="space-y-3 text-sm text-slate-200">
+              <div className="space-y-3 text-base text-grey">
                 <div className="glass rounded-2xl p-4">
                   <p className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                     <span>Free initial consultation</span>
                   </p>
-                  <p className="mt-1 text-xs text-slate-300">
+                  <p className="mt-1 text-sm text-grey-light">
                     A no‑pressure conversation about your roadmap and constraints.
                   </p>
                 </div>
@@ -309,7 +309,7 @@ const Contact = () => {
                     <ShieldCheck className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                     <span>NDA available on request</span>
                   </p>
-                  <p className="mt-1 text-xs text-slate-300">
+                  <p className="mt-1 text-sm text-grey-light">
                     We&apos;re happy to sign your mutual NDA before diving deeper.
                   </p>
                 </div>
@@ -318,7 +318,7 @@ const Contact = () => {
                     <Globe2 className="h-4 w-4 text-cyan-400" aria-hidden="true" />
                     <span>Flexible engagement models</span>
                   </p>
-                  <p className="mt-1 text-xs text-slate-300">
+                  <p className="mt-1 text-sm text-grey-light">
                     From short‑term audits to long‑term dedicated teams.
                   </p>
                 </div>
@@ -342,7 +342,7 @@ const Contact = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <CTABanner
             heading="Prefer to Start with a Short Intro Call?"
-            subtext="We’re happy to start with a 30‑minute conversation to see if there’s a fit—no deck, just context."
+            subtext="We&apos;re happy to begin with a 30-minute conversation to understand your context."
             buttonLabel="Schedule a Call"
             link="/contact"
           />

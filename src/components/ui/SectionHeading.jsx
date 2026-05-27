@@ -50,15 +50,15 @@ const SectionHeading = ({ eyebrow, title, subtitle, align = 'center', gradientWo
       className={`flex w-full flex-col gap-3 ${alignment}`}
     >
       {eyebrow && (
-        <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-cobalt">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cobalt">
           {eyebrow}
         </p>
       )}
-      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-white">
+      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-slate-900">
         {renderedTitle}
       </h2>
       {subtitle && (
-        <p className="max-w-xl text-sm sm:text-base text-grey">
+        <p className="max-w-2xl text-base sm:text-lg text-grey">
           {subtitle}
         </p>
       )}
