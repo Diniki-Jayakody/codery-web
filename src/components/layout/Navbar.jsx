@@ -14,7 +14,7 @@ import {
   PenTool,
 } from 'lucide-react';
 import services from '../../data/services';
-import logo from "../../assets/logo.png";
+import logo from "../../assets/codery_logo.png";
 
 const navLinkClass =
   'relative inline-flex items-center px-3 py-2 text-base font-medium text-grey hover:text-slate-900 focus-ring';

@@ -2,6 +2,7 @@ import outlineWebImg from '../assets/projects/project_outline_construction.png';
 import veloFleetWebImg from '../assets/projects/velo_fleet_web.jpg';
 import veloFleetMobileImg from '../assets/projects/velo_fleet_mobile.png';
 import thompsonWebsite from '../assets/projects/thompson_website.png';
+import peakPartnerWebImg from '../assets/projects/peak_partner_capital.png';
 
 
 export const portfolio = [
@@ -44,6 +45,16 @@ export const portfolio = [
       category: 'Mobile',
       imageUrl:
         veloFleetMobileImg
+    },
+    {
+      id: 'peak-partner-capital',
+      title: 'Peak Partner Capital',
+      type: 'Web Development',
+      url: 'https://peakpartner.co.uk',
+      tech: ['React', 'Tailwind'],
+      category: 'Web',
+      imageUrl:
+      peakPartnerWebImg
     },
   ];
   

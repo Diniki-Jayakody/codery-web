@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import services from '../../data/services';
-import logo from "../../assets/logo.png";
+import logo from "../../assets/codery_logo.png";
 
 
 const Footer = () => {
@@ -117,8 +117,7 @@ const Footer = () => {
           <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-navy-mid pt-6 text-sm text-grey sm:flex-row">
             <p>© {year} Codery Pvt Ltd. All rights reserved.</p>
             <p>
-              Partnered Company 
-              @i211 Solutions (Private) Limited.
+            
             </p>
           </div>
         </div>
